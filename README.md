@@ -14,8 +14,19 @@ This project provides a scalable solution for dynamically resizing images using 
 ### Prerequisites
 
 - [Terraform](https://www.terraform.io/) (v1.7 or later)
-- AWS CLI configured with appropriate permissions
-- An AWS account
+-
+
+### Configuring AWS CLI
+
+Run the following command to configure AWS CLI:
+
+````bash
+aws configure
+You will be prompted to enter:
+    AWS Access Key ID
+    AWS Secret Access Key
+    Default region name (e.g., us-east-1)
+    Default output format (optional)
 
 ### Installation
 
@@ -24,7 +35,7 @@ This project provides a scalable solution for dynamically resizing images using 
    ```bash
    git clone https://github.com/HasanAbdirahman/image-resizing.git
    cd image-resizing
-   ```
+````
 
 2. Initialize Terraform:
 
