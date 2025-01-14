@@ -13,7 +13,7 @@ exports.handler = async (event) => {
 
     // Use sharp to resize the image
     const resizedImage = await sharp(s3Object.Body)
-      .resize(300, 200) // Resize the image to 300x200 (can be dynamic)
+      .resize(300, 200) // Resize the image to 300x200
       .toBuffer();
 
     // Define the parameters to save the resized image back to S3
@@ -24,7 +24,7 @@ exports.handler = async (event) => {
         Bucket: bucket,
         Key: resizedKey,
         Body: resizedImage,
-        ContentType: "image/jpeg", // Set the appropriate MIME type for your image
+        ContentType: "image/jpeg",
       })
       .promise();
 
